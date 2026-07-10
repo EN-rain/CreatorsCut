@@ -1,0 +1,44 @@
+# Build artifacts
+bin/
+obj/
+*.user
+*.suo
+*.sln.docstates
+
+# Test results
+tests/**/TestResults/
+tests/**/coverage/
+
+# IDE files
+.vs/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# User-specific config
+*.userprefs
+
+# NuGet
+packages/
+*.nupkg
+
+# Temp
+*.tmp
+*.autosave
+
+# Legacy Python files (not part of .NET desktop app)
+__pycache__/
+*.egg-info/
+*.pyc
+*.pyo
+run.py
+pyproject.toml
+orchestrator/
+scripts/
+apps/

@@ -1,0 +1,40 @@
+{
+  "taskId": "task_001",
+  "projectId": "sample",
+  "campaignId": "camp_001",
+  "title": "Generate first Dark Magic draft",
+  "objective": "Create a vertical 15-20 second draft from uploaded raw footage and uploaded music.",
+  "styleBrief": "Dark villain aura, fast cuts, glow, impact flashes, beat sync.",
+  "targetPlatform": "tiktok_reels_shorts",
+  "targetDuration": {
+    "min": 2.0,
+    "max": 4.0
+  },
+  "requiredVideoIds": [
+    "vid_001",
+    "vid_002"
+  ],
+  "requiredAudioIds": [
+    "aud_001"
+  ],
+  "allowedTemplates": [
+    "dark_magic_villain_aura"
+  ],
+  "forbiddenActions": [
+    "download_media_from_web",
+    "publish_to_social",
+    "submit_to_clipster",
+    "approve_export"
+  ],
+  "priority": 5,
+  "status": "ready_for_review",
+  "createdBy": "user",
+  "assignedAgent": "agent-001",
+  "baseTimelineVersion": null,
+  "reviewRequired": true,
+  "userFeedback": "",
+  "allowedChangeAreas": [],
+  "protectedPaths": [],
+  "createdAt": "2026-07-09T13:18:26.793817+00:00",
+  "updatedAt": "2026-07-09T13:18:28.729117+00:00"
+}

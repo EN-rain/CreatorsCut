@@ -1,0 +1,21 @@
+{
+  "campaignId": "camp_0622_shorts",
+  "source": "manual_user_input",
+  "campaignName": "0622 YouTube Shorts Cut",
+  "descriptionRaw": "YouTube Shorts cut from user-provided 0622 footage. Minimum 7 seconds. Add own high-quality text/caption. No downloaded media. No fake placeholder footage.",
+  "parsed": {
+    "requiredCaption": "EASY COOK -> CLIPS ARE VIRAL!!!",
+    "requiredComment": "",
+    "minDuration": 7,
+    "maxDuration": 12,
+    "allowedPlatforms": [
+      "youtube_shorts"
+    ],
+    "notes": [
+      "Use only registered source vid_0622.",
+      "Add visible text/caption in edit."
+    ]
+  },
+  "userConfirmedParsedRules": true,
+  "musicDeliveryMode": "embedded_audio"
+}

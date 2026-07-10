@@ -1,0 +1,108 @@
+{
+  "schemaVersion": "1.1",
+  "project": {
+    "id": "sample",
+    "name": "Generate first Dark Magic draft",
+    "status": "draft"
+  },
+  "origin": {
+    "campaignId": "camp_001",
+    "taskId": "task_001",
+    "createdBy": "agent",
+    "createdFromTaskObjective": "Create a vertical 15-20 second draft from uploaded raw footage and uploaded music."
+  },
+  "version": {
+    "timelineVersion": 1,
+    "parentVersion": null,
+    "modifiedBy": "agent",
+    "modifiedAt": "2026-07-09T13:18:26.880414+00:00"
+  },
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30.0,
+    "duration": 3.0,
+    "platform": "tiktok_reels_shorts"
+  },
+  "media": {
+    "sourceIds": [
+      "vid_001",
+      "vid_002"
+    ],
+    "audioIds": [
+      "aud_001"
+    ],
+    "assetIds": []
+  },
+  "campaign": {
+    "source": "manual",
+    "allowedPlatforms": []
+  },
+  "music": {
+    "audioId": "aud_001",
+    "deliveryMode": "embedded_audio",
+    "file": "/mnt/c/Users/LENOVO/Desktop/Projectsss/CreatorCut/projects/sample/input/audio/aud_001_1.m4a",
+    "bpm": null,
+    "beats": [],
+    "dropStart": null
+  },
+  "assets": {
+    "clips": [
+      {
+        "id": "vid_001",
+        "sourceId": "vid_001",
+        "file": "/mnt/c/Users/LENOVO/Desktop/Projectsss/CreatorCut/projects/sample/input/video/vid_001_1.mp4",
+        "sourceStart": 0.0,
+        "duration": 2.0
+      },
+      {
+        "id": "vid_002",
+        "sourceId": "vid_002",
+        "file": "/mnt/c/Users/LENOVO/Desktop/Projectsss/CreatorCut/projects/sample/input/video/vid_002_1.mp4",
+        "sourceStart": 0.0,
+        "duration": 2.0
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "video_main",
+      "type": "video",
+      "items": [
+        {
+          "sourceId": "vid_001",
+          "clipId": "vid_001",
+          "timelineStart": 0.0,
+          "sourceStart": 0.0,
+          "duration": 1.5
+        },
+        {
+          "sourceId": "vid_002",
+          "clipId": "vid_002",
+          "timelineStart": 1.5,
+          "sourceStart": 0.0,
+          "duration": 1.5
+        }
+      ]
+    }
+  ],
+  "markers": [],
+  "compliance": {
+    "campaignRulesConfirmed": true,
+    "durationPass": true,
+    "audioRequirementPass": true,
+    "requiredCommentGenerated": false,
+    "safeAreaPass": null,
+    "notes": []
+  },
+  "review": {
+    "requiresHumanApproval": true,
+    "approvedByUser": false,
+    "approvedAt": null,
+    "notes": []
+  },
+  "render": {
+    "previewMode": "segment",
+    "lastPreviewPath": "previews/rj_a1575208_preview.mp4"
+  }
+}

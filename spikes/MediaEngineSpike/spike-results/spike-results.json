@@ -1,0 +1,21 @@
+{
+  "probe_has_video": true,
+  "probe_has_audio": true,
+  "overlay_seconds": 2.158,
+  "overlay_exists": true,
+  "trim_seconds": 0.288,
+  "trim_exists": true,
+  "transform_seconds": 2.387,
+  "transform_exists": true,
+  "xfade_seconds": 1.405,
+  "xfade_exists": true,
+  "seek_p50_ms": 661.2,
+  "seek_p95_ms": 767.3,
+  "render_720p_seconds": 1.314,
+  "render_720p_exists": true,
+  "render_720p_kb": 55.2,
+  "cancel_exit_code": -1,
+  "cancel_safe": true,
+  "open_p50_ms": 316.1,
+  "cold_startup_ms": 356
+}

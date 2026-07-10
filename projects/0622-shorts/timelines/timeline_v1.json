@@ -1,0 +1,224 @@
+{
+  "schemaVersion": "1.1",
+  "project": {
+    "id": "0622-shorts",
+    "name": "0622 Shorts Cut",
+    "status": "draft"
+  },
+  "origin": {
+    "campaignId": "camp_0622_shorts",
+    "taskId": "task_0622_shorts_cut",
+    "createdBy": "agent",
+    "createdFromTaskObjective": "Create a YouTube Shorts-ready edit from the registered 0622 footage. Minimum 7 seconds, high-quality own text/caption, no fake media."
+  },
+  "version": {
+    "timelineVersion": 1,
+    "parentVersion": null,
+    "modifiedBy": "agent",
+    "modifiedAt": "2026-07-10T07:33:06.965918+00:00"
+  },
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30.0,
+    "duration": 9.5,
+    "platform": "youtube_shorts"
+  },
+  "media": {
+    "sourceIds": [
+      "vid_0622"
+    ],
+    "audioIds": [],
+    "assetIds": []
+  },
+  "campaign": {
+    "source": "manual",
+    "song": null,
+    "requiresLyrics": false,
+    "requiredComment": "",
+    "requiredCaption": "EASY COOK -> CLIPS ARE VIRAL!!!",
+    "hashtags": [],
+    "minimumDuration": 7,
+    "maximumDuration": 12,
+    "deadline": null,
+    "allowedPlatforms": [
+      "youtube_shorts"
+    ],
+    "brandSafetyNotes": null,
+    "watermarkRules": null,
+    "notes": [
+      "Use only registered source vid_0622.",
+      "Add visible text/caption in edit."
+    ]
+  },
+  "music": {
+    "audioId": null,
+    "deliveryMode": "embedded_audio",
+    "file": "",
+    "bpm": null,
+    "beats": [],
+    "dropStart": null
+  },
+  "assets": {
+    "clips": [
+      {
+        "id": "vid_0622",
+        "sourceId": "vid_0622",
+        "file": "C:\\Users\\LENOVO\\Desktop\\Projectsss\\CreatorCut\\projects\\0622-shorts\\input\\video\\vid_0622.mp4",
+        "sourceStart": 0.0,
+        "duration": 21.22,
+        "analysisPath": "analysis\\vid_0622\\media-analysis.json"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "video_main",
+      "type": "video",
+      "items": [
+        {
+          "sourceId": "vid_0622",
+          "clipId": "vid_0622",
+          "timelineStart": 0.0,
+          "sourceStart": 0.0,
+          "duration": 9.5
+        }
+      ]
+    },
+    {
+      "id": "caption_main",
+      "type": "text",
+      "items": [
+        {
+          "text": "EASY COOK",
+          "timelineStart": 0.0,
+          "duration": 9.5,
+          "x": "(w-text_w)/2",
+          "y": "110",
+          "fontSize": 96,
+          "fontColor": "white",
+          "borderColor": "black",
+          "borderWidth": 7
+        },
+        {
+          "text": "CLIPS ARE VIRAL!!!",
+          "timelineStart": 0.0,
+          "duration": 9.5,
+          "x": "(w-text_w)/2",
+          "y": "225",
+          "fontSize": 58,
+          "fontColor": "yellow",
+          "borderColor": "black",
+          "borderWidth": 6
+        },
+        {
+          "text": "WAIT FOR THE REVEAL",
+          "timelineStart": 0.0,
+          "duration": 9.5,
+          "x": "(w-text_w)/2",
+          "y": "h-text_h-210",
+          "fontSize": 58,
+          "fontColor": "white",
+          "borderColor": "black",
+          "borderWidth": 6
+        }
+      ]
+    }
+  ],
+  "markers": [
+    {
+      "time": 0.0,
+      "type": "scene",
+      "sourceId": "vid_0622",
+      "tags": [
+        "blackjack",
+        "dealer",
+        "casino",
+        "live stream",
+        "cards",
+        "gaming"
+      ],
+      "description": "A live-streamed blackjack dealer, dressed in a red and black uniform, is presiding over a duel-style table, reaching for a card from the shoe as the game progresses."
+    },
+    {
+      "time": 0.06965986394557823,
+      "type": "beat",
+      "sourceId": "vid_0622"
+    },
+    {
+      "time": 0.9752380952380952,
+      "type": "beat",
+      "sourceId": "vid_0622"
+    },
+    {
+      "time": 1.8575963718820863,
+      "type": "beat",
+      "sourceId": "vid_0622"
+    },
+    {
+      "time": 2.7631746031746034,
+      "type": "beat",
+      "sourceId": "vid_0622"
+    },
+    {
+      "time": 3.5062131519274375,
+      "type": "beat",
+      "sourceId": "vid_0622"
+    },
+    {
+      "time": 4.4117913832199545,
+      "type": "beat",
+      "sourceId": "vid_0622"
+    },
+    {
+      "time": 5.224489795918367,
+      "type": "beat",
+      "sourceId": "vid_0622"
+    },
+    {
+      "time": 6.03718820861678,
+      "type": "beat",
+      "sourceId": "vid_0622"
+    },
+    {
+      "time": 6.919546485260771,
+      "type": "beat",
+      "sourceId": "vid_0622"
+    },
+    {
+      "time": 7.801904761904762,
+      "type": "beat",
+      "sourceId": "vid_0622"
+    },
+    {
+      "time": 8.684263038548753,
+      "type": "beat",
+      "sourceId": "vid_0622"
+    },
+    {
+      "time": 9.496961451247165,
+      "type": "beat",
+      "sourceId": "vid_0622"
+    }
+  ],
+  "compliance": {
+    "campaignRulesConfirmed": true,
+    "durationPass": true,
+    "audioRequirementPass": true,
+    "requiredCommentGenerated": false,
+    "safeAreaPass": null,
+    "aspectRatioPass": true,
+    "notes": []
+  },
+  "review": {
+    "requiresHumanApproval": true,
+    "approvedByUser": false,
+    "approvedAt": null,
+    "notes": []
+  },
+  "render": {
+    "previewMode": "segment",
+    "lastPreviewPath": "previews\\rj_92c1be38_preview.mp4",
+    "captionBurnIn": true
+  }
+}

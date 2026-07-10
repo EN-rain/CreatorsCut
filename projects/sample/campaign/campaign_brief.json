@@ -1,0 +1,31 @@
+{
+  "campaignId": "camp_001",
+  "source": "manual_user_input",
+  "campaignName": "Dark Magic Anime/Sports",
+  "descriptionRaw": "Make a 15-20 second vertical edit.\nsong: Quadeca - Dark Magic.\nrequired comment: song name: Quadeca - Dark Magic.\nPlatforms: tiktok, instagram, youtube_shorts.\nStyle: dark villain aura, fast cuts, glow.",
+  "parsed": {
+    "requiredSong": "Quadeca - Dark Magic.",
+    "requiresLyrics": false,
+    "requiredComment": ": song name: Quadeca - Dark Magic.",
+    "requiredCaption": null,
+    "hashtags": [],
+    "allowedPlatforms": [
+      "instagram",
+      "tiktok"
+    ],
+    "minDuration": 15.0,
+    "maxDuration": 20.0,
+    "deadline": null,
+    "brandSafetyNotes": null,
+    "watermarkRules": null,
+    "notes": [
+      "Make a 15-20 second vertical edit.",
+      "song: Quadeca - Dark Magic.",
+      "required comment: song name: Quadeca - Dark Magic.",
+      "Platforms: tiktok, instagram, youtube_shorts.",
+      "Style: dark villain aura, fast cuts, glow."
+    ]
+  },
+  "userConfirmedParsedRules": true,
+  "musicDeliveryMode": "embedded_audio"
+}

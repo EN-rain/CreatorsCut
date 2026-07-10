@@ -1,0 +1,14 @@
+[
+  {
+    "audioId": "aud_001",
+    "type": "music",
+    "originalName": "aud_001.m4a",
+    "projectPath": "input/audio/aud_001_1.m4a",
+    "sha256": "6d70f35b5a4a32af79ae43efa86bfaa59af569de45c8c5e0f5bfeec48ef1c393",
+    "duration": 4.0,
+    "sampleRate": 44100,
+    "channels": 2,
+    "detectedBpm": null,
+    "status": "validated"
+  }
+]

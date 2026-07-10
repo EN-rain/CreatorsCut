@@ -1,0 +1,12 @@
+{
+  "renderJobId": "rj_92c1be38",
+  "taskId": "task_0622_shorts_cut",
+  "timelineVersion": 1,
+  "renderMode": "segment",
+  "status": "succeeded",
+  "progress": 1.0,
+  "errorLog": "",
+  "outputPreviewPath": "previews\\rj_92c1be38_preview.mp4",
+  "startedAt": "2026-07-10T10:25:33.520910+00:00",
+  "finishedAt": "2026-07-10T10:25:37.260461+00:00"
+}
