@@ -1,8 +1,0 @@
-{
-  "detect_visual_scenes": true,
-  "transcribe_speech": false,
-  "analyze_audio": true,
-  "understand_frames": true,
-  "whisper_model": "base",
-  "language": null
-}

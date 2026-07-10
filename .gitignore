@@ -32,6 +32,23 @@ packages/
 *.tmp
 *.autosave
 
+# Media files
+*.mp4
+*.mov
+*.avi
+*.wav
+*.mp3
+*.m4a
+*.png
+*.jpg
+*.jpeg
+
+# Agent/tooling artifacts
+.kimchi/
+.devspace-run/
+.playwright-mcp/
+.tools/
+
 # Legacy Python files (not part of .NET desktop app)
 __pycache__/
 *.egg-info/
@@ -42,3 +59,5 @@ pyproject.toml
 orchestrator/
 scripts/
 apps/
+tests/conftest.py
+tests/test_*.py
