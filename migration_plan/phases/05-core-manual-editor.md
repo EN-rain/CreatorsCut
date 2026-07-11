@@ -1,5 +1,7 @@
 # Phase 5 — Core Manual Editor
 
+**Current status: (DONE FOR PRIVATE USE)**
+
 ## Goal
 
 Deliver a complete basic editor that can replace the legacy editor for normal short-form manual editing.

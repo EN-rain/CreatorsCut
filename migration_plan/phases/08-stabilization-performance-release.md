@@ -1,8 +1,10 @@
-# Phase 8 — Stabilization, Performance, and Release Hardening
+# Phase 8 - Stabilization and Performance
+
+**Current status: DONE FOR PRIVATE USE**
 
 ## Goal
 
-Make CreatorCut dependable on CPU-only Windows machines and ready for sustained real projects.
+Make Rushframe dependable on CPU-only Windows machines and ready for sustained local projects.
 
 ## Stabilization
 
@@ -13,7 +15,7 @@ Make CreatorCut dependable on CPU-only Windows machines and ready for sustained 
 - Clear invalidation when source media changes.
 - Draft preview may use reduced-resolution analysis; final export uses the selected final-quality settings.
 
-## CPU and memory work
+## CPU and Memory Work
 
 - Profile before optimizing.
 - Reusable frame buffers and bounded queues.
@@ -24,7 +26,7 @@ Make CreatorCut dependable on CPU-only Windows machines and ready for sustained 
 - Keep media work off the WPF UI thread.
 - Expose preview resolution and dropped-frame status.
 
-## Long-project reliability
+## Long-Project Reliability
 
 - Projects with hours of media and thousands of timeline items.
 - Background autosave without UI stalls.
@@ -34,30 +36,24 @@ Make CreatorCut dependable on CPU-only Windows machines and ready for sustained 
 - Handle disconnected, renamed, and replaced media.
 - Clean temporary files after crashes.
 
-## Packaging
+## Local-Only Scope
 
-- Signed Windows installer when release signing is available.
-- Bundle exact native dependencies and license notices.
-- Clean install, upgrade, repair, and uninstall tests.
-- User data remains outside installation directory.
-- Installer does not require a developer SDK, Python, FFmpeg installation, or administrator rights unless a documented dependency truly requires it.
+No installer, signing, hosted deployment, public publishing, or automatic update work is part of this phase.
 
-## Performance gates
-
-Define machine classes and record actual measurements. Minimum target on the supported low-end test machine:
+## Performance Gates
 
 - UI input remains responsive during proxy generation and export.
-- 540p proxy playback for a simple single-track timeline approaches real time.
+- 540p proxy playback for a simple single-track timeline approaches real time on the owner's machine.
 - Timeline pan/zoom remains responsive with 1,000 items.
 - Memory remains bounded during a 30-minute playback/seek soak.
 - Cancelled jobs release files and native resources.
 
 Do not invent numeric success claims before the benchmark machine is recorded.
 
-## Exit gate
+## Exit Gate
 
 - Stabilization works and is cancellable.
 - Cache limits and cleanup pass tests.
 - Performance report identifies hardware, media, settings, and measurements.
-- Soak, crash-recovery, installer, and upgrade tests pass.
+- Soak and crash-recovery checks pass.
 - No known data-loss bug remains open.

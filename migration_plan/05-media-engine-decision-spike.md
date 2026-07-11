@@ -1,6 +1,6 @@
 # Media Engine Decision Spike
 
-> **Status:** ⬜ NOT DONE — This spike must be completed before Phase 0 can close. Create `spikes/MediaEngineSpike/` and produce results at `migration_plan/results/media-engine-spike.md`.
+> **Status:** ✅ DONE — FFmpeg subprocess backend is implemented and documented in `migration_plan/results/media-engine-spike.md`.
 
 ## Purpose
 

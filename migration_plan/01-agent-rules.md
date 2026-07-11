@@ -20,20 +20,20 @@ If a requirement is not specified, do not invent behavior. Add a clearly marked 
 Allowed dependency direction:
 
 ```text
-CreatorCut.Desktop (WPF)
+Rushframe.Desktop (WPF)
         ↓
-CreatorCut.Application
+Rushframe.Application
         ↓
-CreatorCut.Domain
+Rushframe.Domain
         ↑
-CreatorCut.Infrastructure
-CreatorCut.Media
-CreatorCut.LegacyImport
+Rushframe.Infrastructure
+Rushframe.Media
+Rushframe.LegacyImport
 ```
 
 Rules:
 
-- `CreatorCut.Domain` depends on no UI, database, FFmpeg, MLT, or Python package.
+- `Rushframe.Domain` depends on no UI, database, FFmpeg, MLT, or Python package.
 - WPF views never invoke FFmpeg directly.
 - View models never edit SQLite directly.
 - Native pointers never escape the media adapter layer.

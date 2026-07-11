@@ -1,6 +1,6 @@
 # Editor Interaction Specification
 
-> **Status:** ⬜ NOT STARTED — This is Phase 2/3 work. No WPF UI exists yet.
+> **Status:** ✅ DONE FOR PRIVATE USE — WPF shell, command routing, context menus, timeline pan/zoom, undoable drag commits, and keyboard command wiring exist.
 
 This document defines user input behavior. Agents must not invent conflicting controls.
 

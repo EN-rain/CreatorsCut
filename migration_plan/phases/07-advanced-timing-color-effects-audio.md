@@ -1,8 +1,10 @@
 # Phase 7 — Advanced Timing, Color, Effects, and Audio
 
+**Current status: (DONE FOR PRIVATE USE)**
+
 ## Goal
 
-Implement the advanced manual editing features requested for CreatorCut while keeping all presets editable.
+Implement the advanced manual editing features requested for Rushframe while keeping all presets editable.
 
 ## Timing
 

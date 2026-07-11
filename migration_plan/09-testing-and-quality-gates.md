@@ -1,6 +1,6 @@
 # Testing and Quality Gates
 
-> **Status:** 🟡 PARTIAL — Architecture tests exist (7 tests in `CreatorCut.Domain.Tests`). Full test pyramid is pending per-phase implementation.
+> **Status:** (PARTIAL) — Domain, workspace-model, and legacy-import tests pass, but real WPF interaction, FFmpeg media integration, export correctness, recovery, and performance coverage are incomplete. See `qa_testing_plan/README.md`.
 
 ## Test pyramid
 

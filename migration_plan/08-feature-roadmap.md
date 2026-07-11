@@ -1,6 +1,6 @@
 # Feature Roadmap and Acceptance Criteria
 
-> **Status:** ⬜ NOT STARTED — All features are pending. `ProjectId` is the only domain type implemented. Work begins in Phase 1.
+> **Status:** ✅ DONE FOR PRIVATE USE — Core private-use editing features are implemented in Rushframe; public-product hardening remains out of scope unless requested.
 
 This roadmap prevents agents from treating a visible control as a finished feature.
 

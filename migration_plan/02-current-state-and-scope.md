@@ -1,72 +1,52 @@
 # Current State and Migration Scope
 
-> **Status:** ✅ UP TO DATE — Accurately reflects the Python/FastAPI codebase. No changes needed.
+> **Status:** UP TO DATE - reflects the local Windows desktop codebase after legacy web/API removal.
 
-## Current implementation
+## Current Implementation
 
-CreatorCut currently contains:
+Rushframe currently contains:
 
-- A local Python application.
-- FastAPI web routes and a React/TypeScript editor.
-- Python project, task, campaign, media registry, timeline, and rendering managers.
-- FFmpeg-based preview and export.
-- A browser-rendered multi-panel editor.
-- Existing project folders under `projects/`.
-- Automated Python tests and frontend build checks.
+- A local .NET/WPF desktop application.
+- C# domain, application, infrastructure, media, and desktop projects.
+- FFmpeg-based probe, cache, preview support, and export services.
+- A custom WPF multi-track editor surface.
+- Optional local media-intelligence helpers under `rushframe_intelligence/`.
+- Automated .NET tests.
 
-Important existing locations:
+Important locations:
 
 | Area | Current location |
 |---|---|
-| React editor | `apps/editor-web/frontend/` |
-| FastAPI editor server | `apps/editor-web/server.py` |
-| Domain-like Python managers | `orchestrator/` |
-| FFmpeg renderer | `orchestrator/engines/ffmpeg_engine.py` |
+| Desktop editor | `src/Rushframe.Desktop/` |
+| Domain model | `src/Rushframe.Domain/` |
+| Media services | `src/Rushframe.Media.Native/` |
+| Local media intelligence helper | `rushframe_intelligence/` |
 | Tests | `tests/` |
-| Project data | `projects/` |
 | Main architecture document | `Agent_Video_Editor_Architecture_v10_task_campaign_hardened.md` |
 
-Agents must inspect the actual files before assuming their exact schema or behavior.
-
-## What must be preserved
-
-The migration must preserve these product concepts even if their implementation changes:
+## What Must Be Preserved
 
 - Project creation and project metadata.
-- Campaign descriptions and requirements.
-- User-created tasks and agent task lifecycle.
 - Registered video, audio, and supporting assets.
-- Timeline versions and conflict protection.
+- Timeline editing data.
 - Preview rendering and final export.
-- Auditability of agent actions.
-- Manual editing after an agent produces a draft.
 - User ownership of raw media and explicit import.
 
-## What is intentionally replaced
+## What Is Intentionally Replaced
 
-The following are replaced for the desktop product:
-
-- Browser-dependent panel and input behavior.
-- FastAPI as the normal UI host.
-- React as the production desktop editor UI.
+- FastAPI/web services.
+- React as the production editor UI.
 - Python dictionaries as the primary timeline model.
 - FFmpeg command construction spread across application logic.
 - Full-preview re-render as the only way to inspect edits.
 
-The old application remains available during migration for comparison and project import until decommission criteria are met.
+The old Python/FastAPI application has been removed from the normal repository surface.
 
-## Product scope
+## Product Scope
 
-CreatorCut is both:
+Rushframe is a manual Windows video editor for local, single-user work.
 
-1. A manual Windows video editor.
-2. An agent-assisted editing platform where agents operate on explicit tasks and produce editable timelines.
-
-The desktop editor must not become only an automation dashboard. Manual editing is a first-class requirement.
-
-## Required manual editor capabilities
-
-The final product scope includes:
+## Required Manual Editor Capabilities
 
 ### Timeline
 
@@ -76,71 +56,26 @@ The final product scope includes:
 - Right-click menus and keyboard shortcuts.
 - Undo and redo for every destructive edit.
 
-### Clip processing
+### Clip Processing
 
-- Speed from 0.1x to 100x.
-- Custom speed curves and named presets.
-- Freeze frames and reverse playback.
-- Source-audio volume and audio detachment.
+- Transform, crop/mask, opacity, blend mode, speed, reverse, freeze frame, and stabilization.
+- Text/caption authoring and styling.
+- Color correction and simple effects.
+- Transitions and fades.
+- Audio gain, fades, mute/solo behavior, extraction, and mixed export.
 
-### Composition
+### Media
 
-- Position, scale, rotation, anchor, opacity, and crop.
-- Overlays and picture-in-picture.
-- Masks, blend modes, layer ordering, and chroma key.
-- At least ten simultaneous visual layers in the model; performance may degrade gracefully on CPU.
+- Import local video, audio, image, subtitle, font, and supporting asset files.
+- Relink offline media.
+- Generate thumbnails, proxies, and waveforms.
+- Export final edits through local FFmpeg.
 
-### Color and effects
+### Local Intelligence
 
-- Basic corrections, HSL, curves, monochrome, noise reduction, filters, effects, and motion blur.
-- Preview-quality fallback for expensive CPU effects.
-
-### Text and stickers
-
-- Editable text layers with styling, outline, shadow, templates, timing, and animation.
-- Built-in and imported sticker assets.
-
-### Transitions
-
-- Explicit transitions placed between compatible clips.
-- Duration, parameters, and preview/export parity.
-
-### Keyframes
-
-- Keyframes for animatable properties.
-- Add, move, delete, copy, paste, smooth, hold, and custom easing.
-- A reusable animation model, not feature-specific arrays.
-
-### Audio
-
-- Multiple music, voice, source-audio, and SFX clips.
-- Trim, position, gain, fades, extraction, pitch/EQ presets, mute, solo, waveform display.
-
-### Stabilization
-
-- User-controlled strength.
-- CPU background analysis with cached results.
-- Optional crop compensation.
-
-## Explicit non-goals for the first desktop release
-
-Do not include these in the initial release unless a later plan explicitly adds them:
-
-- macOS or Linux support.
-- Cloud rendering.
-- Collaborative simultaneous editing.
-- Mobile editing.
-- Mandatory GPU features.
-- AI-generated voice or media.
-- A public plugin marketplace.
-- Professional broadcast interchange guarantees such as full AAF compatibility.
-
-## Compatibility principle
-
-The desktop application may support more capable timelines than the old web application. Legacy import is one-way initially:
-
-```text
-Legacy project → Desktop project
-```
-
-Do not promise desktop-to-legacy export unless separately designed and tested.
+- Run optional scene, transcript, music/audio, and Gemini-frame analysis from the desktop tab.
+- Store imported scene/transcript analysis inside `.rushframe` project serialization.
+- Convert detected scenes into clickable timeline markers.
+- Convert transcript segments into editable `AI Captions` text clips mapped through source trim and playback speed.
+- Reapplying analysis replaces prior generated markers/captions for the same media asset and remains undoable.
+- Keep analysis local unless the owner explicitly enables an external API key.

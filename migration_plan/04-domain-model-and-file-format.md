@@ -1,6 +1,6 @@
 # Domain Model and Project Format
 
-> **Status:** 🟡 PARTIAL — `ProjectId` value type created in `CreatorCut.Domain`. Full domain model (Sequence, Track, Clip, MediaAsset, etc.) is **Phase 1** work.
+> **Status:** ✅ DONE — Rushframe has typed IDs, timeline/project/media models, commands, serialization, undo/redo, and tests.
 
 ## Core rule
 
@@ -223,7 +223,7 @@ Detached audio creates a new audio timeline item referencing the same media asse
 Recommended project layout:
 
 ```text
-MyProject.creatorcut/
+MyProject.rushframe/
 ├── project.json
 ├── timeline/
 │   ├── main.sequence.json

@@ -1,5 +1,7 @@
 # Phase 1 — Domain Model and Edit Commands
 
+**Current status: (DONE)**
+
 ## Goal
 
 Create an editor model that is independent of WPF, FFmpeg, MLT, files, and databases.

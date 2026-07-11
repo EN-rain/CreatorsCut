@@ -1,5 +1,7 @@
 # Phase 2 — Desktop Shell and Workspace
 
+**Current status: (DONE FOR PRIVATE USE)**
+
 ## Goal
 
 Build the native Windows application shell before adding advanced editing behavior.
@@ -18,7 +20,7 @@ Build the native Windows application shell before adding advanced editing behavi
 
 - Middle mouse over timeline pans only timeline.
 - Middle mouse over zoomed preview pans only preview.
-- Right-click opens CreatorCut menus and never browser menus.
+- Right-click opens Rushframe menus and never browser menus.
 - Mouse capture is released on pointer-up, cancellation, deactivation, and lost capture.
 - Keyboard shortcuts do not fire while typing unless explicitly allowed.
 

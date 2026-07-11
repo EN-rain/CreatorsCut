@@ -7,7 +7,7 @@ Use these templates when delegating work to smaller agents. Replace bracketed fi
 ## Template A — Domain command
 
 ```text
-Task: Implement [CommandName] in CreatorCut.Domain/Application.
+Task: Implement [CommandName] in Rushframe.Domain/Application.
 
 Read first:
 - migration_plan/01-agent-rules.md

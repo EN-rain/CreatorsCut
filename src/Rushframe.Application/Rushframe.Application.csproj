@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Rushframe.Domain\Rushframe.Domain.csproj" />
+    <ProjectReference Include="..\Rushframe.Media.Abstractions\Rushframe.Media.Abstractions.csproj" />
+    <ProjectReference Include="..\Rushframe.LegacyImport\Rushframe.LegacyImport.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

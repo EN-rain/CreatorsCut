@@ -1,5 +1,7 @@
 # Phase 3 — Custom Timeline UI
 
+**Current status: (DONE FOR PRIVATE USE)**
+
 ## Goal
 
 Implement the high-performance manual editing surface. Do not create one heavyweight WPF control per clip.

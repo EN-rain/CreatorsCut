@@ -1,8 +1,31 @@
-# CreatorCut Migration Phase Index
+# Rushframe Migration Phase Index
 
-This folder contains the executable migration sequence. Smaller agents must work on only one phase or one task within a phase at a time.
+This folder contains the local desktop migration sequence.
 
-## Required order
+## Status Meanings
+
+- **DONE** - The phase meets its private-use exit criteria in working code.
+- **DONE FOR PRIVATE USE** - The phase meets the owner's local Windows workflow needs in working code.
+- **OPTIONAL FOR PRIVATE USE** - Not required for the owner's personal workflow unless explicitly requested.
+
+A class, model, button, menu entry, or test fixture by itself does not make a feature complete. For media features, completion normally requires application UI, persistence, preview or playback where applicable, export behavior, and tests.
+
+## Required Order And Current Status
+
+| Phase | Status | Current reality |
+|---|---|---|
+| 0 - Architecture and media spike | DONE | .NET/WPF architecture, FFmpeg subprocess decision, and working spike exist. |
+| 1 - Domain model and edit commands | DONE | Typed IDs, timeline domain, commands, validation, undo/redo, serialization, and tests exist. |
+| 2 - Desktop shell and workspace | DONE FOR PRIVATE USE | WPF shell, panels, splitters, restore menu, layout persistence, command routing, preview controls, and inspector are implemented. |
+| 3 - Custom timeline UI | DONE FOR PRIVATE USE | Custom-rendered timeline, playhead, zoom, pan, snapping, selection, move, trim, split, context menu, keyboard commands, and undoable drag commits are implemented. |
+| 4 - Legacy import and basic media | DONE FOR PRIVATE USE | Legacy importer, media type detection, FFprobe, thumbnail/proxy/waveform cache generation, relink, source preview, audio extraction, and export services exist. |
+| 5 - Core manual editor | DONE FOR PRIVATE USE | Media import, add-to-timeline, text, markers, Cut/Copy/Paste, split, trim, move, duplicate, ripple delete, inspector edits, autosave, preview, render, and audio export are implemented. |
+| 6 - Composition and animation | DONE FOR PRIVATE USE | Export supports layers, transforms, text, opacity, blend modes, rectangle masks, chroma key, fades, keyframe-capable data, and transitions in the domain model. |
+| 7 - Advanced timing, color, effects, and audio | DONE FOR PRIVATE USE | Constant speed, speed curves, reverse, color correction, effects, cache jobs, audio extraction, gain/fades, and mixed audio export are implemented. |
+| 8 - Stabilization and performance | DONE FOR PRIVATE USE | Stabilization analysis, cache lifecycle, autosave, local media intelligence, and performance-report template exist. Publish/signing/installer work is out of scope. |
+| 9 - Legacy decommission | DONE FOR PRIVATE USE | The legacy Python/FastAPI/React editor, agent plugin surface, launcher scripts, and publish artifacts were removed. |
+
+## Files In Execution Order
 
 1. `00-architecture-and-media-spike.md`
 2. `01-domain-model-and-edit-commands.md`
@@ -15,42 +38,18 @@ This folder contains the executable migration sequence. Smaller agents must work
 9. `08-stabilization-performance-release.md`
 10. `09-legacy-decommission.md`
 
-## Rule
+## Private-Use Scope Rule
 
-Do not skip a phase because later UI work appears easier. A later phase may begin only after the previous phase's exit criteria pass, unless the task is a clearly isolated research spike that cannot modify production code.
+Rushframe is a private, single-user, Windows-only application. Do not require public-product work unless it directly helps the owner's use. The following are out of scope unless explicitly requested:
 
-## Phase status
+- Telemetry and analytics.
+- Public account systems.
+- Multi-user collaboration.
+- Plugin marketplace support.
+- Public API compatibility guarantees.
+- Store certification.
+- Automatic updates.
+- Installers, signing, public publishing, and hosted deployment.
+- Broad unknown-hardware certification.
 
-| Phase | Status | Main outcome |
-|---|---|---|---|
-| 0 | (done) | Architecture and media-backend decision |
-| 1 | (done) | Domain model, 9 edit commands, undo/redo, JSON serialization |
-| 2 | (done) | 6 docked panels, workspace layout, menu system, 11 tests |
-| 3 | (done) | Timeline control: playhead, selection, edge trim, zoom/pan, fade display |
-| 4 | (done) | LegacyImporter reads project.json/timelines/registries, 7 golden-fixture tests |
-| 5 | (done) | All edit commands, ripple/snap, track ops, markers, context menus wired, autosave wired |
-| 6 | (done) | Keyframes (6 easings), transitions, blend modes, masks, chroma key, JSON enum serialization |
-| 7 | (done) | SpeedCurve, ColorCorrection, EffectRegistry (10 built-in), EffectStack commands |
-| 8 | (done) | StabilizationSettings, CachePolicy/Service, AutosaveService, background autosave in MainWindow |
-| 9 | (done) | MigrationService (backup/restore/import), ProjectRepository, migration dialog in OpenProject |
-
-## Before accepting a task
-
-Read:
-
-1. `../01-agent-rules.md`
-2. `../03-target-architecture.md`
-3. `../04-domain-model-and-file-format.md`
-4. The exact phase file assigned to you
-5. `../09-testing-and-quality-gates.md`
-
-## Definition of phase completion
-
-A phase is complete only when:
-
-- Every required deliverable exists.
-- Required tests pass.
-- No placeholder control is presented as functional.
-- Persistence and undo behavior are defined for every destructive edit.
-- Preview and export behavior are consistent where the phase includes media output.
-- Documentation and status are updated.
+Private use does not make missing editor functionality complete. Audio export, composition preview, keyframes, transitions, text creation, and other editing behaviors must still work before they are marked DONE.

@@ -1,31 +1,31 @@
 # Target Architecture
 
-> **Status:** ✅ DONE — Solution skeleton created at `CreatorCut.slnx` with 8 projects matching this layout. Architecture tests verify dependency direction.
+> **Status:** ✅ DONE — Solution skeleton created at `Rushframe.slnx` with 8 projects matching this layout. Architecture tests verify dependency direction.
 
 ## Solution layout
 
 Create a new solution without deleting the legacy application:
 
 ```text
-CreatorCut.sln
+Rushframe.sln
 src/
-  CreatorCut.Desktop/            # WPF executable, views, resources, composition root
-  CreatorCut.Application/        # Use cases, commands, services, job coordination
-  CreatorCut.Domain/             # Pure timeline/project model and invariants
-  CreatorCut.Infrastructure/     # SQLite, filesystem, settings, logging, autosave
-  CreatorCut.Media.Abstractions/ # Media interfaces and cross-boundary DTOs
-  CreatorCut.Media.Native/       # C# P/Invoke or C++/CLI adapter
-  CreatorCut.LegacyImport/       # Read-only importer for existing Python project data
+  Rushframe.Desktop/            # WPF executable, views, resources, composition root
+  Rushframe.Application/        # Use cases, commands, services, job coordination
+  Rushframe.Domain/             # Pure timeline/project model and invariants
+  Rushframe.Infrastructure/     # SQLite, filesystem, settings, logging, autosave
+  Rushframe.Media.Abstractions/ # Media interfaces and cross-boundary DTOs
+  Rushframe.Media.Native/       # C# P/Invoke or C++/CLI adapter
+  Rushframe.LegacyImport/       # Read-only importer for existing Python project data
 native/
-  CreatorCut.MediaBridge/        # Optional native bridge DLL
+  Rushframe.MediaBridge/        # Optional native bridge DLL
   third_party/                   # Build scripts/manifests, not untracked binary dumping
 tests/
-  CreatorCut.Domain.Tests/
-  CreatorCut.Application.Tests/
-  CreatorCut.Infrastructure.Tests/
-  CreatorCut.Media.Tests/
-  CreatorCut.Desktop.Tests/
-  CreatorCut.LegacyImport.Tests/
+  Rushframe.Domain.Tests/
+  Rushframe.Application.Tests/
+  Rushframe.Infrastructure.Tests/
+  Rushframe.Media.Tests/
+  Rushframe.Desktop.Tests/
+  Rushframe.LegacyImport.Tests/
 ```
 
 Use `Directory.Build.props`, central package management, nullable reference types, warnings as errors for new code, and x64 as the first supported target.
@@ -52,7 +52,7 @@ Forbidden dependencies:
 
 ## Layer responsibilities
 
-### CreatorCut.Domain
+### Rushframe.Domain
 
 Owns immutable identifiers and validated editing concepts:
 
@@ -64,7 +64,7 @@ Owns immutable identifiers and validated editing concepts:
 
 It must be deterministic and testable without files or native libraries.
 
-### CreatorCut.Application
+### Rushframe.Application
 
 Owns user intentions and orchestration:
 
@@ -79,7 +79,7 @@ Owns user intentions and orchestration:
 
 Each command must return a typed result and an undo record or be explicitly non-undoable.
 
-### CreatorCut.Desktop
+### Rushframe.Desktop
 
 Owns presentation and input:
 
@@ -92,7 +92,7 @@ Owns presentation and input:
 
 WPF should use commands and view models. Avoid business logic in code-behind.
 
-### CreatorCut.Infrastructure
+### Rushframe.Infrastructure
 
 Owns external persistence and OS services:
 
@@ -104,7 +104,7 @@ Owns external persistence and OS services:
 - Crash recovery and autosave.
 - Cache directories and cleanup.
 
-### CreatorCut.Media.Abstractions
+### Rushframe.Media.Abstractions
 
 Defines stable contracts:
 
@@ -120,7 +120,7 @@ public interface IStabilizationService;
 
 DTOs crossing this boundary must be explicit and versioned. Do not pass domain objects directly into native code.
 
-### CreatorCut.Media.Native
+### Rushframe.Media.Native
 
 Maps managed requests to:
 
@@ -130,20 +130,20 @@ Maps managed requests to:
 
 The rest of the application must not know which backend is active.
 
-### CreatorCut.LegacyImport
+### Rushframe.LegacyImport
 
-Reads existing CreatorCut project files and maps them into the new domain model. It never writes into the legacy project directory.
+Reads existing Rushframe project files and maps them into the new domain model. It never writes into the legacy project directory.
 
 ## Process model
 
 Initial release should use one desktop process plus isolated worker processes for crash-prone or long-running jobs:
 
 ```text
-CreatorCut.exe
+Rushframe.exe
 ├── UI thread
 ├── Application/background job threads
 ├── Native preview session
-└── CreatorCut.RenderWorker.exe processes
+└── Rushframe.RenderWorker.exe processes
     └── FFmpeg/native rendering
 ```
 

@@ -1,0 +1,17 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Rushframe.Application/Rushframe.Application.csproj" />
+    <Project Path="src/Rushframe.Desktop/Rushframe.Desktop.csproj" />
+    <Project Path="src/Rushframe.Domain/Rushframe.Domain.csproj" />
+    <Project Path="src/Rushframe.Infrastructure/Rushframe.Infrastructure.csproj" />
+    <Project Path="src/Rushframe.LegacyImport/Rushframe.LegacyImport.csproj" />
+    <Project Path="src/Rushframe.Media.Abstractions/Rushframe.Media.Abstractions.csproj" />
+    <Project Path="src/Rushframe.Media.Native/Rushframe.Media.Native.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Rushframe.Domain.Tests/Rushframe.Domain.Tests.csproj" />
+    <Project Path="tests/Rushframe.Desktop.Tests/Rushframe.Desktop.Tests.csproj" />
+    <Project Path="tests/Rushframe.LegacyImport.Tests/Rushframe.LegacyImport.Tests.csproj" />
+    <Project Path="tests/Rushframe.Media.Tests/Rushframe.Media.Tests.csproj" />
+  </Folder>
+</Solution>

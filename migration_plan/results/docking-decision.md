@@ -35,7 +35,7 @@
 
 Panel close → collapse to `GridLength(0)`.  
 Panel restore → set back to saved size.  
-Layout saved to `%LocalAppData%\CreatorCut\layout.json`.
+Layout saved to `%LocalAppData%\Rushframe\layout.json`.
 
 ## Future upgrade path
 

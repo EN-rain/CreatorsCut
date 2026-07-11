@@ -1,8 +1,10 @@
 # Phase 4 — Legacy Import and Basic Media
 
+**Current status: (DONE FOR PRIVATE USE)**
+
 ## Goal
 
-Make existing CreatorCut projects usable in the desktop application without modifying or deleting the legacy source data.
+Make existing Rushframe projects usable in the desktop application without modifying or deleting the legacy source data.
 
 ## Required import coverage
 

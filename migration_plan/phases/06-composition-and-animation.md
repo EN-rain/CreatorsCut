@@ -1,5 +1,7 @@
 # Phase 6 — Composition and Animation
 
+**Current status: (DONE FOR PRIVATE USE)**
+
 ## Goal
 
 Add layered compositing and manual animation without breaking CPU-only usability.

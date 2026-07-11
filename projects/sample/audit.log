@@ -1,5 +1,0 @@
-{"timestamp": "2026-07-09T13:18:26.816451+00:00", "actor": "agent", "action": "claim_task", "target": "task_001", "details": {"agent": "agent-001"}}
-{"timestamp": "2026-07-09T13:18:26.829057+00:00", "actor": "agent", "action": "check_task_inputs", "target": "task_001", "details": {}}
-{"timestamp": "2026-07-09T13:18:26.853394+00:00", "actor": "agent", "action": "analyze_video_sources", "target": "task_001", "details": {}}
-{"timestamp": "2026-07-09T13:18:26.890233+00:00", "actor": "agent", "action": "create_draft_timeline", "target": "task_001", "details": {"timeline_version": 1, "items": 2}}
-{"timestamp": "2026-07-09T13:18:28.741854+00:00", "actor": "agent", "action": "mark_task_ready_for_review", "target": "task_001", "details": {"render_job_id": "rj_a1575208", "preview": "previews/rj_a1575208_preview.mp4"}}

@@ -1,5 +1,7 @@
 # Phase 0 — Architecture and Media Spike
 
+**Current status: (DONE)**
+
 ## Goal
 
 Prove the Windows desktop architecture before building the editor. No production feature work belongs here.
@@ -14,7 +16,7 @@ Prove the Windows desktop architecture before building the editor. No production
 
 ## Required deliverables
 
-- `CreatorCut.sln` with Domain, Application, Infrastructure, Desktop, MediaBridge, and test projects.
+- `Rushframe.sln` with Domain, Application, Infrastructure, Desktop, MediaBridge, and test projects.
 - Dependency-direction tests.
 - Minimal desktop window that starts and exits cleanly.
 - Media spike report containing exact versions, commands, CPU use, memory use, deployment size, and failures.

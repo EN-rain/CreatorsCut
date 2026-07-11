@@ -41,7 +41,7 @@ MLT (Candidate A) is **not accepted** for the first desktop milestone because:
 1. **Windows build complexity** — MLT requires a custom Windows build from source with multiple native dependencies (mvcp, sox, etc.). No pre-built Windows x64 MLT SDK is readily available.
 2. **No measurable benefit for Phase 1** — The FFmpeg subprocess approach already handles probe, overlay, transforms, transitions, seek, render, and cancellation reliably.
 3. **Crash isolation** — Subprocess FFmpeg workers are fully isolated. An encoder crash cannot take down the editor.
-4. **Existing codebase alignment** — CreatorCut's current Python renderer already uses FFmpeg subprocess. The C# migration naturally extends this pattern.
+4. **Existing codebase alignment** — Rushframe's current Python renderer already uses FFmpeg subprocess. The C# migration naturally extends this pattern.
 
 ### Bridge contract
 
@@ -62,7 +62,7 @@ If FFmpeg subprocess latency becomes a bottleneck for interactive editing, a cus
 ## How to run the spike yourself
 
 ```powershell
-cd CreatorCut
+cd Rushframe
 dotnet run --project spikes/MediaEngineSpike
 # Results written to spikes/MediaEngineSpike/spike-results/spike-results.json
 ```
